@@ -2,13 +2,13 @@
 /**
  * The frontend functionality of the plugin
  *
- * @package    Plugin
+ * @package    Meta_Tags
  * @subpackage Frontend
  *
  * @since      1.0.0
  */
 
-namespace Plugin\Frontend;
+namespace Meta_Tags\Frontend;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -77,11 +77,11 @@ class Frontend {
  * @access public
  * @return object Returns an instance of the class.
  */
-function abp_frontend() {
+function abmt_frontend() {
 
 	return Frontend::instance();
 
 }
 
 // Run an instance of the class.
-abp_frontend();
+abmt_frontend();

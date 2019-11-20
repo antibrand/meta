@@ -7,7 +7,7 @@
  * @link       http://ccdzine.com
  * @since      1.0.0
  *
- * @package    Plugin
+ * @package    Meta_Tags
  * @subpackage Includes
  */
 
@@ -79,7 +79,7 @@ class Antibrand_Deactivate {
  * @access public
  * @return object Returns an instance of the class.
  */
-function abp_deactivate() {
+function abmt_deactivate() {
 
 	return Antibrand_Deactivate::instance();
 

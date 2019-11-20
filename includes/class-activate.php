@@ -4,7 +4,7 @@
  *
  * This file must not be namespaced.
  *
- * @package    Plugin
+ * @package    Meta_Tags
  * @subpackage Includes
  *
  * @since      1.0.0
@@ -78,7 +78,7 @@ class Antibrand_Activate {
  * @access public
  * @return object Returns an instance of the class.
  */
-function abp_activate() {
+function abmt_activate() {
 
 	return Antibrand_Activate::instance();
 

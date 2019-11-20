@@ -2,7 +2,7 @@
 /**
  * Fired when the plugin is uninstalled
  *
- * @package    Plugin
+ * @package    Meta_Tags
  *
  * @since      1.0.0
  */

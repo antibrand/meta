@@ -1,13 +1,13 @@
 <?php
 /**
  * Admin functiontionality and pages
- * @package    Plugin
+ * @package    Meta_Tags
  * @subpackage Admin
  *
  * @since      1.0.0
  */
 
-namespace Plugin\Admin;
+namespace Meta_Tags\Admin;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -76,11 +76,11 @@ class Admin {
  * @access public
  * @return object Returns an instance of the class.
  */
-function abp_admin() {
+function abmt_admin() {
 
 	return Admin::instance();
 
 }
 
 // Run an instance of the class.
-abp_admin();
+abmt_admin();

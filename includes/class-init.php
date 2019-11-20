@@ -2,13 +2,13 @@
 /**
  * The core plugin class
  *
- * @package    Plugin
+ * @package    Meta_Tags
  * @subpackage Includes
  *
  * @since      1.0.0
  */
 
-namespace Plugin\Includes;
+namespace Meta_Tags\Includes;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -72,16 +72,16 @@ final class Init {
 	private function dependencies() {
 
 		// Plugin settings class.
-		require_once ABP_PATH . 'includes/class-settings.php';
+		require_once ABMT_PATH . 'includes/class-settings.php';
 
 		// Admin/backend functionality, scripts and styles.
-		require_once ABP_PATH . 'admin/class-admin.php';
+		require_once ABMT_PATH . 'admin/class-admin.php';
 
 		// Frontend functionality, scripts and styles.
-		require_once ABP_PATH . 'frontend/class-frontend.php';
+		require_once ABMT_PATH . 'frontend/class-frontend.php';
 
 		// Translation functionality.
-		require_once ABP_PATH . 'includes/class-i18n.php';
+		require_once ABMT_PATH . 'includes/class-i18n.php';
 
 	}
 
@@ -95,18 +95,18 @@ final class Init {
 	public function plugin_support() {
 
 		// Add Advanced Custom Fields Support.
-		if ( abp_acf() ) {
-			include_once ABP_PATH . 'includes/acf/class-extend-acf.php';
+		if ( abmt_acf() ) {
+			include_once ABMT_PATH . 'includes/acf/class-extend-acf.php';
 		}
 
 		// Add Beaver Builder support.
 		if ( class_exists( 'FLBuilder' ) ) {
-			include_once ABP_PATH . 'includes/beaver/class-beaver-builder.php';
+			include_once ABMT_PATH . 'includes/beaver/class-beaver-builder.php';
 		}
 
 		// Add Elementor support.
 		if ( class_exists( '\Elementor\Plugin' ) ) {
-			include_once ABP_PATH . 'includes/elementor/class-elementor.php';
+			include_once ABMT_PATH . 'includes/elementor/class-elementor.php';
 		}
 
 	}
@@ -120,11 +120,11 @@ final class Init {
  * @access public
  * @return object Returns an instance of the class.
  */
-function abp_init() {
+function abmt_init() {
 
 	return Init::instance();
 
 }
 
 // Run an instance of the class.
-abp_init();
+abmt_init();
