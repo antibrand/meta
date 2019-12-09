@@ -85,32 +85,6 @@ final class Init {
 
 	}
 
-	/**
-	 * Load classes to extend plugins.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return void
-	 */
-	public function plugin_support() {
-
-		// Add Advanced Custom Fields Support.
-		if ( abmt_acf() ) {
-			include_once ABMT_PATH . 'includes/acf/class-extend-acf.php';
-		}
-
-		// Add Beaver Builder support.
-		if ( class_exists( 'FLBuilder' ) ) {
-			include_once ABMT_PATH . 'includes/beaver/class-beaver-builder.php';
-		}
-
-		// Add Elementor support.
-		if ( class_exists( '\Elementor\Plugin' ) ) {
-			include_once ABMT_PATH . 'includes/elementor/class-elementor.php';
-		}
-
-	}
-
 }
 
 /**

@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin
+ * Meta Tags
  *
- * @package     Plugin
+ * @package     Meta_Tags
  * @version     1.0.0
  * @link        https://github.com/antibrand/meta
  *
  * Plugin Name:  meta
  * Plugin URI:   https://github.com/antibrand/meta
- * Description:  A basic starter plugin for your website management system.
+ * Description:  Meta tags for your website management system.
  * Version:      1.0.0
  * Author:
  * Author URI:
@@ -33,8 +33,8 @@ if ( ! defined( 'WPINC' ) ) {
  */
 
 // First check for other classes with the same name.
-if ( ! class_exists( 'Plugin' ) ) :
-	final class Plugin {
+if ( ! class_exists( 'Meta_Tags' ) ) :
+	final class Meta_Tags {
 
 		/**
 		 * Instance of the class
@@ -113,7 +113,7 @@ if ( ! class_exists( 'Plugin' ) ) :
 			}
 
 			/**
-			 * Plugin folder path
+			 * Plugin directory  path
 			 *
 			 * @since  1.0.0
 			 * @return string Returns the filesystem directory path (with trailing slash)
@@ -124,7 +124,7 @@ if ( ! class_exists( 'Plugin' ) ) :
 			}
 
 			/**
-			 * Plugin folder URL
+			 * Plugin directory  URL
 			 *
 			 * @since  1.0.0
 			 * @return string Returns the URL directory path (with trailing slash)
@@ -208,22 +208,22 @@ if ( ! class_exists( 'Plugin' ) ) :
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @return object Returns the instance of the `Plugin` class.
+	 * @return object Returns the instance of the `Meta_Tags` class.
 	 */
-	function abmt_plugin() {
+	function ab_meta() {
 
-		return Plugin::instance();
+		return Meta_Tags::instance();
 
 	}
 
 	// Begin plugin functionality.
-	abmt_plugin();
+	ab_meta();
 
 // End the check for the plugin class.
 endif;
 
 // Bail out now if the core class was not run.
-if ( ! function_exists( 'abmt_plugin' ) ) {
+if ( ! function_exists( 'ab_meta' ) ) {
 	return;
 }
 
